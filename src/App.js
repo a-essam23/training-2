@@ -1,5 +1,5 @@
-function App() {
-    return <div className=""></div>;
-}
+import Homepage from "./pages/Homepage";
 
-export default App;
+export default function App() {
+    return <Homepage />;
+}
