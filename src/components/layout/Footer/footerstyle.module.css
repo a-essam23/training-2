@@ -1,0 +1,8 @@
+.Styletheme{
+    color: black;
+    cursor: pointer;
+    transition: all .5s;
+}
+.Styletheme:hover{
+    color:  rgb(180, 149, 67);
+}

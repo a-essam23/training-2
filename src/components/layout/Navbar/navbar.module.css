@@ -1,0 +1,40 @@
+.stylesdrpbtnCategory , .stylesdrpbtnBlog{
+    color:  rgb(180, 149, 67)
+}
+
+.soicalLinks{
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+}
+.soicalLinks li i{
+    cursor :pointer ;
+    color: black;
+    transition: all .5;
+}
+.soicalLinks li i:hover{
+    color:  rgb(180, 149, 67);
+}
+
+.droplistBlog ,.droplistCategory{
+    display: none;
+    transition: all .5s;
+}
+
+.stylesdrpbtnBlog:hover .droplistBlog {
+    width: fit-content;
+    display: block;
+}
+
+.droplistBlog li{
+    padding-top: 10px;
+}
+.stylesdrpbtnCategory:hover .droplistCategory{
+    width: fit-content;
+    display: block;
+    
+}
+
+.droplistCategory li{
+    padding-top: 10px;
+}
