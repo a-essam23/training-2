@@ -12,7 +12,7 @@ const FooterTop = styled.section`
         padding-block: var(--small-padding);
     }
 
-    & section .wraper {
+    & .wraper {
         display: flex;
         justify-content: space-between;
         align-items: center;
