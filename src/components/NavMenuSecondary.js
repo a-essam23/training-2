@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "../utilities/classes.css";
 
-const NavMenuSecondary = styled.ul`
+const ThisComponent = styled.ul`
      {
         list-style-type: none;
         display: flex;
@@ -13,11 +13,11 @@ const NavMenuSecondary = styled.ul`
     }
 `;
 
-export default function navMenuSecondary() {
+export default function NavMenuSecondary() {
     return (
         <nav>
             <h2 className="screen-readers-only">Secondary Navigation Menu</h2>
-            <NavMenuSecondary>
+            <ThisComponent>
                 <li>
                     <a href="/">Looks</a>
                 </li>
@@ -27,7 +27,7 @@ export default function navMenuSecondary() {
                 <li>
                     <a href="/">Travel</a>
                 </li>
-            </NavMenuSecondary>
+            </ThisComponent>
         </nav>
     );
 }

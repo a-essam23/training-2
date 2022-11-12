@@ -4,32 +4,37 @@ import NavIcons from "../components/NavIcons";
 
 import styled from "styled-components";
 
-const FooterTop = styled.section`
+const ThisComponent = styled.section`
      {
-        display: flex;
-        flex-direction: column;
-        gap: var(--medium-gap);
         padding-block: var(--small-padding);
     }
 
-    & .wraper {
+    & .secondary-navbar__wraper {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: var(--medium-gap);
         align-items: center;
-        padding-inline: var(--medium-padding);
+    }
+
+    @media screen and (min-width: 992px) {
+        & .secondary-navbar__wraper {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-inline: var(--medium-padding);
+        }
     }
 `;
 
-export default function footerTop() {
+export default function FooterTop() {
     return (
-        <FooterTop>
+        <ThisComponent>
             <PhotoSlider />
             <section>
-                <div className="wraper">
+                <div className="secondary-navbar__wraper">
                     <NavMenuSecondary />
                     <NavIcons />
                 </div>
             </section>
-        </FooterTop>
+        </ThisComponent>
     );
 }

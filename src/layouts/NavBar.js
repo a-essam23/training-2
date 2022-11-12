@@ -4,8 +4,8 @@ import SearchForm from "../components/SearchForm";
 
 import styled from "styled-components";
 
-const NavBar = styled.section`
-    & .wraper {
+const ThisComponent = styled.section`
+    & .navbar__wraper {
         padding-block: var(--small-padding);
         display: flex;
         justify-content: space-between;
@@ -14,22 +14,22 @@ const NavBar = styled.section`
         padding-inline: var(--medium-padding);
     }
 
-    & section {
+    & .navbar__icons {
         display: flex;
         gap: var(--small-padding);
     }
 `;
 
-export default function navBar() {
+export default function NavBar() {
     return (
-        <NavBar>
-            <div className="wraper">
+        <ThisComponent>
+            <div className="navbar__wraper">
                 <NavMenu />
-                <section>
+                <section className="navbar__icons">
                     <NavIcons />
                     <SearchForm />
                 </section>
             </div>
-        </NavBar>
+        </ThisComponent>
     );
 }

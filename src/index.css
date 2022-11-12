@@ -37,7 +37,10 @@
 
 :root {
     /* Colors */
-    --primary-color-1: #eea300;
+    --primary-color-1: #b49543;
+    --primary-color-2: #eeeeee;
+    --secondary-color-1: #666666;
+    --secondary-color-2: #cccccc;
     --color-100: #e6e6e6;
     --color-200: #cccccc;
     --color-300: #b3b3b3;
@@ -45,12 +48,17 @@
     --color-500: #808080;
     --color-600: #666666;
     /* Paddings */
-    --small-padding: 1rem;
+    --extra-small-padding: 0.5rem;
+    --small-padding: calc(var(--extra-small-padding) * 2);
     --medium-padding: calc(var(--small-padding) * 2);
     /* Gaps */
-    --medium-gap: 1rem;
+    --small-gap: 0.5rem;
+    --medium-gap: calc(var(--small-gap) * 2);
     /* Logo */
     --logo-font-size: 3rem;
+    /* Borders */
+    --thin-border: 0.05rem solid var(--primary-color-2);
+    --primary-border: 0.15rem solid var(--primary-color-2);
 }
 
 /* 
@@ -68,6 +76,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    transition: color 0.1s;
 }
 
 html {

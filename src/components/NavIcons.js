@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavIcons = styled.section`
+const ThisComponent = styled.section`
      {
         display: flex;
         gap: var(--small-padding);
@@ -8,6 +8,8 @@ const NavIcons = styled.section`
 
     & .fa-wifi {
         rotate: 45deg;
+        position: relative;
+        top: 2px;
     }
 
     & a:hover {
@@ -15,24 +17,24 @@ const NavIcons = styled.section`
     }
 `;
 
-export default function navIcons() {
+export default function NavIcons() {
     return (
-        <NavIcons>
-            <a href="/">
+        <ThisComponent>
+            <a href="/" target={"_blank"} title="Go to facebook">
                 <i className="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="/">
+            <a href="/" target={"_blank"} title="Go to twitter">
                 <i className="fa-brands fa-twitter"></i>
             </a>
-            <a href="/">
+            <a href="/" target={"_blank"} title="Go to pinterest">
                 <i className="fa-brands fa-pinterest-p"></i>
             </a>
-            <a href="/">
+            <a href="/" target={"_blank"} title="Go to dribbble">
                 <i className="fa-brands fa-dribbble"></i>
             </a>
-            <a href="/">
+            <a href="/" target={"_blank"} title="Go to ">
                 <i className="fa-solid fa-wifi"></i>
             </a>
-        </NavIcons>
+        </ThisComponent>
     );
 }

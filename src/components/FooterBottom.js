@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-const FooterBottom = styled.section`
-    & .wraper {
+const ThisComponent = styled.section`
+    & .footer-bottom__wraper {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: var(--medium-gap);
-        padding-bottom: var(--medium-padding);
-        padding-inline: var(--medium-padding);
+        padding-block: var(--medium-padding);
     }
 
     & .logo img {
@@ -15,7 +14,7 @@ const FooterBottom = styled.section`
     }
 
     & p {
-        color: var(--color-600);
+        color: var(--secondary-color-1);
     }
 
     & a {
@@ -27,17 +26,23 @@ const FooterBottom = styled.section`
     }
 `;
 
-export default function footerBottom() {
+export default function FooterBottom() {
     return (
-        <FooterBottom>
-            <div className="wraper">
+        <ThisComponent>
+            <div className="footer-bottom__wraper">
                 <a href="/" className="logo">
                     <img src="/img/logo.png" alt="OLSEN" />
                 </a>
                 <p>
-                    <a href="/">Olsen WordPress Theme</a> by <a href="/">CSSIgniter</a>
+                    <a href="/" target={"_blank"}>
+                        Olsen WordPress Theme
+                    </a>{" "}
+                    by{" "}
+                    <a href="/" target={"_blank"}>
+                        CSSIgniter
+                    </a>
                 </p>
             </div>
-        </FooterBottom>
+        </ThisComponent>
     );
 }

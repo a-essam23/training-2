@@ -5,6 +5,7 @@ import styled from "styled-components";
 const MainContent = styled.main`
     & .wraper {
         padding-inline: var(--medium-padding);
+        padding-bottom: var(--small-padding);
         min-height: 100vh;
         font-weight: bold;
         font-size: 5rem;
