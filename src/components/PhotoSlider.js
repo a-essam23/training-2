@@ -9,7 +9,7 @@ const ThisComponent = styled.section`
     }
 
     & .photo-slider__wraper div {
-        width: 12rem;
+        width: calc(100% / 6);
         height: 100%;
     }
 `;
