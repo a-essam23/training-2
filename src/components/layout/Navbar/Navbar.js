@@ -24,7 +24,7 @@ const navbar = () => {
 
             <li>
               <div className={styles.stylesdrpbtnCategory}>
-                <button className={styles.stylesdrpbtnCategory}>Category<i class="fa-sharp fa-solid fa-caret-down mx-3"></i></button>
+                <button className={styles.stylesdrpbtnCategory}>Category<i className="fa-sharp fa-solid fa-caret-down mx-3"></i></button>
                 <ul className={styles.droplistCategory}>
                   <li>
                     <a>Fashion</a>

@@ -3,27 +3,13 @@ import styles from "./footerstyle.module.css"
 const Footer = () => {
   return (
     <div>
-        <footer className='w-3/4 m-auto pt-4'>
+        <footer className='w-96 bg-orange-500 m-auto pt-4'>
         
         <hr className='pb-4'></hr>
-        <div className='m-auto w-2/4 mt-6'>
-            <ul className=' w-1/4 text-2xl font-bold flex w-1/2 justify-between m-auto'>
-                <li>
-                   O 
-                </li>
-                <li>
-                   L
-                </li>
-                <li>
-                   S 
-                </li>
-                <li>
-                   E
-                </li>
-                <li>
-                   N
-                </li>
-            </ul>
+        <div className='m-auto w-96 mt-6'>
+            <div className='sm:w-1/4 tracking-maxSpacing text-2xl font-bold  w-96 bg-slate-500  m-auto'>
+                   O L S E N
+            </div>
             <p className='tracking-tighter text-center text-gray-400'>
             <a className={styles.Styletheme}>Olsen WordPress Theme</a>
             <span className='mx-1'>by</span> 
