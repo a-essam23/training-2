@@ -7,10 +7,11 @@
         1.1- Google Fonts
 
     2- Custom Properties
-        Colors
-        Paddings
-        Gaps
-        Logo
+        2.1- Colors
+        2.2- Paddings
+        2.3- Gaps
+        2.4- Borders
+        2.5- Transitions
     
     3- Reset Styles
         3.1- Box Sizing
@@ -18,6 +19,10 @@
         3.3- Fonts
         3.4- Images
         3.5- Links
+        3.6- Horizontal Rules
+
+    4- Utility Classes
+        4.1- For Screen Readers Only
 */
 
 /* 
@@ -36,29 +41,34 @@
 */
 
 :root {
-    /* Colors */
+    /* 2.1- Colors */
     --primary-color-1: #b49543;
     --primary-color-2: #eeeeee;
     --secondary-color-1: #666666;
     --secondary-color-2: #cccccc;
-    --color-100: #e6e6e6;
-    --color-200: #cccccc;
-    --color-300: #b3b3b3;
-    --color-400: #999999;
-    --color-500: #808080;
-    --color-600: #666666;
-    /* Paddings */
+    --secondary-color-3: #e6e6e6;
+
+    /* 2.2- Paddings */
     --extra-small-padding: 0.5rem;
-    --small-padding: calc(var(--extra-small-padding) * 2);
-    --medium-padding: calc(var(--small-padding) * 2);
-    /* Gaps */
-    --small-gap: 0.5rem;
-    --medium-gap: calc(var(--small-gap) * 2);
-    /* Logo */
-    --logo-font-size: 3rem;
-    /* Borders */
-    --thin-border: 0.05rem solid var(--primary-color-2);
-    --primary-border: 0.15rem solid var(--primary-color-2);
+    --small-padding: 1rem;
+    --medium-padding: 2rem;
+    /* --large-padding: 3rem; */
+
+    /* 2.3- Gaps */
+    --extra-small-gap: 0.5rem;
+    --small-gap: 1rem;
+    --medium-gap: 2rem;
+
+    /* 2.4- Borders */
+    --thin-border-width: 0.05rem;
+    --primary-border-width: 0.15rem;
+    --thin-border: var(--thin-border-width) solid var(--secondary-color-3);
+    --primary-border: var(--primary-border-width) solid var(--primary-color-2);
+
+    /* 2.5- Transitions */
+    --normal-transition: 0.25s;
+    --normal-delay: 0.25s;
+    --delayed-normal-transition: var(--normal-transition) var(--normal-delay);
 }
 
 /* 
@@ -66,6 +76,10 @@
         3- Reset Styles
     ==============================
 */
+
+h1 {
+    margin: 0;
+}
 
 *,
 *::after,
@@ -76,7 +90,6 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    transition: color 0.1s;
 }
 
 html {
@@ -100,8 +113,21 @@ a {
     text-decoration: none;
 }
 
+/* 3.6- Horizontal Rules */
 hr {
     height: 0.01rem;
-    background-color: var(--color-100);
+    background-color: var(--secondary-color-3);
     border: none;
+}
+
+/* 
+    ==============================
+        4- Utility Classes
+    ==============================
+*/
+
+/* 4.1- For Screen Readers Only */
+.screen-readers-only {
+    position: absolute;
+    left: -10000px;
 }

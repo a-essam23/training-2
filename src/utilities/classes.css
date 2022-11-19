@@ -1,8 +1,0 @@
-.no-wrap {
-    white-space: nowrap;
-}
-
-.screen-readers-only {
-    position: absolute;
-    left: -10000px;
-}
