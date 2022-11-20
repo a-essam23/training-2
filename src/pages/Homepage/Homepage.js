@@ -1,4 +1,5 @@
 import { BlogHeader } from "../../components";
+import blogs from "../../assets/blogs";
 import styles from "./Homepage.module.css";
 const pageData = Array(16)
     .fill()
@@ -14,11 +15,8 @@ const pageData = Array(16)
 const Homepage = () => {
     return (
         <section className="min-h-screen gap-16 flex flex-col items-center">
-            {pageData.map((item) => (
-                <BlogHeader
-                    className={`${styles.blogHeader} text-xl`}
-                    content={item}
-                />
+            {blogs.map((item) => (
+                <BlogHeader content={item} />
             ))}
         </section>
     );

@@ -12,7 +12,7 @@ const Navbar = () => {
                             <div className={styles.stylesdrpbtnBlog}>
                                 <button className={styles.stylesdrpbtnBlog}>
                                     Blog Layout
-                                    <i class="fa-sharp fa-solid fa-caret-down mx-3"></i>
+                                    <i className="fa-sharp fa-solid fa-caret-down mx-3"></i>
                                 </button>
                                 <ul className={styles.droplistBlog}>
                                     <li>
@@ -63,22 +63,22 @@ const Navbar = () => {
                     </ul>
                     <ul className={styles.soicalLinks}>
                         <li>
-                            <i class="fa-brands fa-facebook-f"></i>{" "}
+                            <i className="fa-brands fa-facebook-f"></i>{" "}
                         </li>
                         <li>
-                            <i class="fa-brands fa-twitter"></i>{" "}
+                            <i className="fa-brands fa-twitter"></i>{" "}
                         </li>
                         <li>
-                            <i class="fa-brands fa-pinterest"></i>{" "}
+                            <i className="fa-brands fa-pinterest"></i>{" "}
                         </li>
                         <li>
-                            <i class="fa-brands fa-dribbble"></i>{" "}
+                            <i className="fa-brands fa-dribbble"></i>{" "}
                         </li>
                         <li>
-                            <i class="fa-solid fa-rss"></i>{" "}
+                            <i className="fa-solid fa-rss"></i>{" "}
                         </li>
                         <li>
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i className="fa-solid fa-magnifying-glass"></i>
                         </li>
                     </ul>
                 </div>
