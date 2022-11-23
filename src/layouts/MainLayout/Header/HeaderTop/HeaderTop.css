@@ -1,0 +1,13 @@
+.page-header__top {
+    text-align: center;
+    padding-block: var(--medium-padding);
+}
+
+.logo a {
+    font-size: 2.5rem;
+    transition: color var(--normal-transition);
+}
+
+.logo a:hover {
+    color: var(--primary-color-1);
+}

@@ -1,15 +1,17 @@
-import styled from "styled-components";
+import { blogArticles } from "../../assets/data";
 import { MainLayout } from "../../layouts";
-import { BlogPosts } from "../../components";
-
-const ThisComponent = styled.main``;
+import { BlogArticle } from "../../components";
 
 export default function Homepage() {
     return (
         <MainLayout>
-            <ThisComponent>
-                <BlogPosts />
-            </ThisComponent>
+            <main>
+                <section>
+                    {blogArticles.map((element) => (
+                        <BlogArticle key={element.id} content={element} />
+                    ))}
+                </section>
+            </main>
         </MainLayout>
     );
 }

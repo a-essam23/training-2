@@ -1,4 +1,4 @@
-export const blogPostData = [
+export const blogArticles = [
     {
         id: "1",
         cat: "Looks",

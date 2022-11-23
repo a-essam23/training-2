@@ -1,0 +1,27 @@
+.page-footer__top {
+    padding-block: var(--small-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--small-gap);
+}
+
+.nav-menu--secondary {
+    display: flex;
+    gap: var(--small-gap);
+}
+
+.nav-menu--secondary .nav-item {
+    border: none;
+}
+
+.nav-menu--secondary a {
+    padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .page-footer__top {
+        flex-direction: unset;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,99 @@
+.nav-item {
+    list-style-type: none;
+    border-color: var(--secondary-color-1);
+    border-top: var(--thin-border);
+}
+
+.nav-item:last-child {
+    border-bottom: var(--thin-border);
+}
+
+.nav-item > .list {
+    position: relative;
+}
+
+.nav-item > .list:after {
+    content: "";
+    width: 1rem;
+    height: 0.5rem;
+    background-color: black;
+    clip-path: polygon(0 0, 20% 0, 50% 60%, 80% 0, 100% 0, 50% 100%, 0 0);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 0.5rem / 3);
+    left: calc(100% - 1rem - var(--medium-padding));
+}
+
+.nav-item:hover > .list:after,
+.nav-item:focus > .list:after {
+    rotate: 180deg;
+    background-color: var(--primary-color-1);
+    transition: rotate var(--normal-transition), background-color var(--normal-transition);
+}
+
+.nav-item:hover > a,
+.nav-item:focus > a {
+    color: var(--primary-color-1);
+}
+
+.nav-item > a,
+.nav-item > .list:after {
+    transition: color var(--normal-transition), background-color var(--normal-transition), rotate var(--normal-transition);
+}
+
+.nav-item a {
+    display: block;
+    padding-block: var(--small-padding);
+    padding-inline: var(--medium-padding);
+}
+
+@media screen and (min-width: 900px) {
+    .nav-item,
+    .nav-item:last-child {
+        border: none;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-item a {
+        display: unset;
+        padding-block: var(--extra-small-padding);
+        padding-inline: var(--small-padding);
+    }
+
+    .nav-menu > .nav-item:first-child > a {
+        padding-left: 0;
+    }
+
+    .nav-menu > .nav-item:last-child > a {
+        padding-right: 0;
+    }
+
+    .nav-item > .list {
+        margin-right: 1rem;
+        padding-right: calc(var(--small-padding) + 0.25rem);
+    }
+
+    .nav-item > .list,
+    .nav-item > .list:after {
+        transition: color var(--delayed-normal-transition), background-color var(--delayed-normal-transition), rotate var(--delayed-normal-transition);
+    }
+
+    .nav-item:hover > .list,
+    .nav-item:hover > .list:after {
+        transition: color var(--normal-transition), background-color var(--normal-transition), rotate var(--normal-transition);
+    }
+
+    .nav-item > .list:after {
+        left: unset;
+        right: 0;
+    }
+
+    .nav-item:hover > .sub-menu,
+    .nav-item:focus > .sub-menu {
+        visibility: visible;
+        transition: visibility 0s;
+    }
+}

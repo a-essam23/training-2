@@ -1,0 +1,38 @@
+button,
+button:hover {
+    transition: color var(--normal-transition), background-color var(--normal-transition), border-color var(--normal-transition);
+}
+
+button {
+    border: none;
+    background-color: unset;
+    padding: 0;
+    cursor: pointer;
+}
+
+button[class*="primary"],
+button[class*="secondary"] {
+    padding-block: var(--extra-small-padding);
+    padding-inline: var(--small-padding);
+}
+
+button[class*="primary"] {
+    border: var(--primary-border);
+    color: var(--primary-color-1);
+    background-color: unset;
+}
+
+button[class*="primary"]:hover {
+    color: black;
+    border-color: var(--primary-color-1);
+}
+
+button[class*="secondary"] {
+    border: none;
+    color: white;
+    background-color: var(--primary-color-1);
+}
+
+button[class*="secondary"]:hover {
+    background-color: black;
+}

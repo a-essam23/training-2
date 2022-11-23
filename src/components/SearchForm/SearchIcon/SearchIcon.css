@@ -1,0 +1,14 @@
+#searchButton {
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
+
+#searchButton,
+#searchButton:hover {
+    transition: color var(--normal-transition);
+}
+
+#searchButton:hover {
+    color: var(--primary-color-1);
+}

@@ -1,0 +1,40 @@
+.blog-article__footer {
+    padding-block: var(--small-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--extra-small-gap);
+    align-items: center;
+    position: relative;
+}
+
+.blog-article__footer > hr {
+    width: 100%;
+    position: absolute;
+    top: calc(50% + var(--extra-small-gap) * 1.5);
+    z-index: -1;
+}
+
+.blog-article__footer > .contact-links,
+.blog-article__footer > a {
+    background-color: white;
+}
+
+.blog-article__footer > a > button {
+    padding-block: var(--small-padding);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 400px) {
+    .blog-article__footer {
+        flex-direction: unset;
+        justify-content: space-between;
+    }
+
+    .blog-article__footer > hr {
+        top: 50%;
+    }
+
+    .blog-article__footer > .contact-links {
+        padding-right: var(--small-padding);
+    }
+}

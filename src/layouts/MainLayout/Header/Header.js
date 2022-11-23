@@ -1,19 +1,12 @@
-import styled from "styled-components";
-import { HeaderTop } from "../Header";
+import { HeaderTop } from "../../../layouts";
 import { NavBar } from "../../../components";
-
-const ThisComponent = styled.header`
-    & > hr {
-        margin-inline: var(--medium-padding);
-    }
-`;
 
 export default function Header() {
     return (
-        <ThisComponent>
+        <header>
             <HeaderTop />
             <hr />
             <NavBar />
-        </ThisComponent>
+        </header>
     );
 }

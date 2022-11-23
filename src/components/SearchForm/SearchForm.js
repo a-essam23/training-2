@@ -1,17 +1,11 @@
-import styled from "styled-components";
-import { SearchIcon, SearchBar } from "../SearchForm";
-
-const ThisComponent = styled.form`
-     {
-        position: relative;
-    }
-`;
+import { SearchIcon, SearchBar } from "../../components";
+import "./SearchForm.css";
 
 export default function SearchForm() {
     return (
-        <ThisComponent>
+        <form className="search__form">
             <SearchIcon />
             <SearchBar />
-        </ThisComponent>
+        </form>
     );
 }

@@ -1,0 +1,30 @@
+.sub-menu {
+    margin-inline: var(--medium-padding);
+    display: none;
+}
+
+.sub-menu .nav-item:last-child {
+    border-bottom: none;
+}
+
+@media screen and (min-width: 900px) {
+    .sub-menu {
+        position: absolute;
+        left: 0;
+        top: calc(100% + var(--small-padding));
+        width: 200%;
+        background-color: white;
+        border: var(--thin-border);
+        visibility: hidden;
+        transition: visibility var(--delayed-normal-transition);
+        margin-inline: 0;
+    }
+
+    .sub-menu > li:not(:last-child) {
+        border-bottom: var(--thin-border);
+    }
+
+    .sub-menu .nav-item a {
+        display: block;
+    }
+}

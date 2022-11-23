@@ -1,52 +1,12 @@
 import { useState, useEffect } from "react";
-import styled from "styled-components";
-import { navItems, NavItems } from "../NavMenu";
-
-const ThisComponent = styled.nav`
-    & > ul {
-        display: flex;
-    }
-
-    @media screen and (max-width: 900px) {
-        & ul {
-            flex-direction: column;
-        }
-
-        & > ul ul {
-            margin-inline: var(--medium-padding);
-            display: none;
-        }
-
-        & li {
-            border-color: var(--secondary-color-1);
-            border-top: var(--thin-border);
-        }
-
-        & > ul > li:last-child {
-            border-bottom: var(--thin-border);
-        }
-
-        & .list:after {
-            left: calc(100% - 1rem - var(--medium-padding));
-        }
-
-        & a {
-            display: block;
-            padding-inline: var(--medium-padding);
-            padding-block: var(--small-padding);
-        }
-    }
-`;
+import { navItems } from "../../assets/data";
+import { NavItem } from "../../components";
+import "./NavMenu.css";
 
 export default function NavMenu() {
     const [width, setWidth] = useState(window.innerWidth);
     const onResizeHandler = () => {
         setWidth(window.innerWidth);
-
-        // document.querySelectorAll("nav .list").forEach((element) => {
-        //     if (width >= 900) element.nextElementSibling.style = "display: unset;";
-        //     else element.nextElementSibling.style = "display: none;";
-        // });
     };
 
     const onClickHandler = (event) => {
@@ -83,13 +43,13 @@ export default function NavMenu() {
     }, [width]);
 
     return (
-        <ThisComponent>
+        <nav>
             <h2 className="screen-readers-only">Main navigation menu</h2>
-            <ul>
+            <ul className="nav-menu">
                 {navItems.map(({ title, url, sublist }) => (
-                    <NavItems key={title} title={title} url={url} sublist={sublist} />
+                    <NavItem key={title} title={title} url={url} sublist={sublist} />
                 ))}
             </ul>
-        </ThisComponent>
+        </nav>
     );
 }

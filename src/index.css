@@ -23,6 +23,15 @@
 
     4- Utility Classes
         4.1- For Screen Readers Only
+        4.2- Hide Elements
+
+    5- Extra Small Screens Layout
+
+    6- Responsive Layout
+        6.1- Small Screens
+        6.2- Medium Screens
+        6.3- Large Screens
+        6.4- Extra Large Screens
 */
 
 /* 
@@ -105,6 +114,7 @@ body {
 /* 3.4- Images */
 img {
     display: block;
+    width: 100%;
 }
 
 /* 3.5- Links */
@@ -130,4 +140,56 @@ hr {
 .screen-readers-only {
     position: absolute;
     left: -10000px;
+}
+
+/* 4.2- Hide Elements */
+.hidden {
+    display: none;
+}
+
+/* 
+    ==============================
+        5- Extra Small Screens Layout
+    ==============================
+*/
+
+#root {
+    padding-inline: var(--extra-small-padding);
+    transition: padding-inline var(--normal-transition);
+}
+
+/* 
+    ==============================
+        6- Responsive Layout
+    ==============================
+*/
+
+/* 6.1- Small Screens */
+@media screen and (min-width: 400px) {
+    #root {
+        padding-inline: var(--small-padding);
+    }
+}
+
+/* 6.2- Medium Screens */
+@media screen and (min-width: 700px) {
+    #root {
+        padding-inline: var(--medium-padding);
+    }
+}
+
+/* 6.3- Large Screens */
+@media screen and (min-width: 900px) {
+    #root {
+        max-width: 900px;
+        margin-inline: auto;
+        transition: max-width var(--normal-transition);
+    }
+}
+
+/* 6.4- Extra Large Screens */
+@media screen and (min-width: 1200px) {
+    #root {
+        max-width: 1200px;
+    }
 }
