@@ -28,11 +28,14 @@
     display: flex;
     position: absolute;
     right: calc(50vw - 1rem * 5 - var(--small-padding));
-    top: calc(100% + var(--small-padding) + var(--extra-small-padding) + var(--primary-border-width));
+    top: calc(
+        100% + var(--small-padding) + var(--extra-small-padding) + var(--primary-border-width)
+    );
     background-color: var(--primary-color-2);
     padding-block: var(--extra-small-padding);
     padding-inline: var(--small-padding);
     border-radius: 1rem;
+    z-index: 1;
 }
 
 .nav-bar #menuExpandBtn {

@@ -9,7 +9,10 @@
     gap: var(--small-gap);
     position: absolute;
     right: 0;
-    top: calc(100% + var(--small-padding) + var(--extra-small-padding) + var(--primary-border-width));
+    top: calc(
+        100% + var(--small-padding) + var(--extra-small-padding) + var(--primary-border-width)
+    );
+    z-index: 1;
 }
 
 #searchBar > input {

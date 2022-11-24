@@ -1,5 +1,6 @@
 .sub-menu {
     margin-inline: var(--medium-padding);
+    z-index: 1;
     display: none;
 }
 

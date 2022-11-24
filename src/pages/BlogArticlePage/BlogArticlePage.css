@@ -1,0 +1,26 @@
+.article-page > p {
+    padding-block: var(--medium-padding);
+    text-align: center;
+}
+
+.article-page > .backToHome {
+    display: inline-block;
+    margin-block: var(--medium-padding);
+    width: 100%;
+}
+
+.article-page > .backToHome > button {
+    width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+    .article-page > p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .article-page > p {
+        font-size: 1.25rem;
+    }
+}
