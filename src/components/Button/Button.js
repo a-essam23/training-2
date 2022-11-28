@@ -8,6 +8,7 @@ export default function Button({
     kind,
     children = "Button",
     tabIndex,
+    onClick = () => {},
 }) {
     return (
         <button
@@ -16,6 +17,7 @@ export default function Button({
             id={id}
             className={`button--${kind} ${className}`}
             tabIndex={tabIndex}
+            onClick={onClick}
         >
             {children}
         </button>

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Homepage, BlogArticlePage } from "./pages";
+import { BlogProvider } from "./context/BlogProvider";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 export default function App() {
     const [articleId, serArticleId] = useState(0);
@@ -12,9 +14,22 @@ export default function App() {
         serArticleId(0);
     };
 
-    return articleId > 0 ? (
-        <BlogArticlePage articleID={articleId} onExit={exitHandler} />
-    ) : (
-        <Homepage onArticleOpen={articleOpenHandler} />
+    return (
+        <BlogProvider>
+            <Router>
+                <Routes>
+                    <Route path={"/"} element={<Homepage />} />
+                    <Route path="/:genre" element={<BlogArticlePage />} />
+                    <Route
+                        path="/:genre/:blogId"
+                        element={<BlogArticlePage />}
+                    />
+                </Routes>
+            </Router>
+        </BlogProvider>
     );
+    //     <BlogArticlePage articleID={articleId} onExit={exitHandler} />
+    // ) : (
+
+    // );
 }

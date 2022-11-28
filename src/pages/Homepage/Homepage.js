@@ -1,8 +1,9 @@
-import { blogArticles } from "../../assets/data";
 import { MainLayout } from "../../layouts";
 import { BlogArticle, Slider } from "../../components";
+import { useBlogs } from "../../context/BlogProvider";
 
 export default function Homepage({ onArticleOpen }) {
+    const { blogs, removeBlog } = useBlogs();
     const articlePageOpenHandler = (articleID) => {
         onArticleOpen(articleID);
     };
@@ -13,11 +14,12 @@ export default function Homepage({ onArticleOpen }) {
                     <Slider />
                 </header>
                 <section>
-                    {blogArticles.map((element) => (
+                    {blogs.map((element) => (
                         <BlogArticle
                             key={element.id}
                             content={element}
                             onArticlePageOpen={articlePageOpenHandler}
+                            onClickDelete={() => removeBlog(element.id)}
                         />
                     ))}
                 </section>
