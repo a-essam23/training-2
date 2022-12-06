@@ -4,6 +4,8 @@ import { BlogArticleHeader, Button } from "../../components";
 import { Blog } from "../../context";
 import { blogArticles } from "../../assets/data";
 import "./BlogArticlePage.css";
+import { Navigate, useParams } from "react-router-dom";
+import { useBlogs } from "../../context/BlogProvider";
 
 export default function BlogArticlePage() {
     const ctx = useContext(Blog);

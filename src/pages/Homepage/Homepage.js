@@ -1,5 +1,6 @@
 import { blogArticles } from "../../assets/data";
 import { BlogArticle, Slider } from "../../components";
+import { useBlogs } from "../../context/BlogProvider";
 
 export default function Homepage({ onArticleOpen }) {
     const articleOpenHandler = (id) => {
