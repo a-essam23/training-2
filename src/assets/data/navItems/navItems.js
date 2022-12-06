@@ -15,23 +15,23 @@ export const navItems = [
     },
     {
         title: "Categories",
-        url: "#",
+        url: "Genre",
         sublist: [
             {
                 title: "Fashion",
-                url: "#",
+                url: "Genre/Fashion",
             },
             {
                 title: "Music",
-                url: "#",
+                url: "Genre/Music",
             },
             {
                 title: "Looks",
-                url: "#",
+                url: "Genre/Looks",
             },
             {
                 title: "Nature",
-                url: "#",
+                url: "Genre/Nature",
             },
         ],
     },

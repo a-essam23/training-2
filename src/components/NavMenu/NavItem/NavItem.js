@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { NavSubMenu } from "../../../components";
 import "./NavItem.css";
 
@@ -11,7 +12,7 @@ export default function NavItem({ title, url, sublist }) {
         </li>
     ) : (
         <li className="nav-item">
-            <a href={url}>{title}</a>
+            <Link to={url}>{title}</Link>
         </li>
     );
 }
