@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper";
+
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
@@ -28,8 +30,6 @@ const DataUi = (props) => {
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log("slide change")}
               >
                 <SwiperSlide>
                   <img
@@ -82,7 +82,7 @@ const DataUi = (props) => {
               </a>
             </div>
             <div className="col-2">
-              <a href="ee" alt="ls">
+              <Link to={`/${props.items.post}/${props.items.Subject}`} alt="ls">
                 <button
                   style={{
                     border: "1px solid black",
@@ -94,7 +94,7 @@ const DataUi = (props) => {
                 >
                   continue Reading
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

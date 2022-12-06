@@ -1,16 +1,16 @@
 import DataUI from "./Dataa/DataUi";
 import NavBar from "./Header/NavBar";
+import { useBlogs } from "../context/ContextProvider";
 
 const LayOut = (props) => {
-  const DD = props.info;
-  console.log(props)
+  const { blogs, getBlogs } = useBlogs();
 
   return (
     <div>
       <NavBar></NavBar>
 
-      {DD.map((el) => (
-        <DataUI hand={props.handler} items={el} key={Math.random()} />
+      {blogs.map((el) => (
+        <DataUI items={el} key={el.id} />
       ))}
     </div>
   );
