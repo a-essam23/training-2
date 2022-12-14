@@ -12,7 +12,7 @@ const Blog = (props) => {
       </div>
 
       <div className={`col-12 ${styles.flx}`}>
-        <img className={`${styles.img}`} src={props.content.photo} alt="ff" />
+        <img className={`${styles.img}`} src={`/training-2/public/img/${props.content.photo}`} alt="ff" />
         <figcaption className={`${styles.fig}`}>
           {props.content.teaser}
         </figcaption>

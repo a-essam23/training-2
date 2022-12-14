@@ -22,7 +22,7 @@ export const blogArticles = [
           "Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid. Whatever PBR&B mustache locavore. Etsy distillery scenester Neutra 90's",
       },
     ],
-    photo: "http://localhost:3001/img/pic1--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "2",
@@ -31,7 +31,7 @@ export const blogArticles = [
     date: "August 29, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic3--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "3",
@@ -40,7 +40,7 @@ export const blogArticles = [
     date: "August 28, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic5--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "4",
@@ -49,7 +49,7 @@ export const blogArticles = [
     date: "August 27, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic10--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "5",
@@ -58,7 +58,7 @@ export const blogArticles = [
     date: "August 26, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic10--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "6",
@@ -67,7 +67,7 @@ export const blogArticles = [
     date: "August 25, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic3--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "7",
@@ -76,7 +76,7 @@ export const blogArticles = [
     date: "August 24, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic3--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "8",
@@ -85,7 +85,7 @@ export const blogArticles = [
     date: "August 23, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic1--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "9",
@@ -94,7 +94,7 @@ export const blogArticles = [
     date: "August 22, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic1--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
   {
     id: "10",
@@ -103,6 +103,6 @@ export const blogArticles = [
     date: "August 21, 2021",
     teaser:
       "Wes Anderson banjo you probably haven't heard of them cred, XOXO deep v kale chips Kickstarter viral. Swag meggings jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid.jean shorts chillwave seitan disrupt. Meditation flexitarian authentic organic, you probably haven't heard of them taxidermy fap pop-up. Trust fund Tumblr Schlitz Banksy Austin squid",
-    photo: "http://localhost:3001/img/pic1--1920-1080.jpg",
+    photo: "pic1--1920-1080.jpg",
   },
 ];
