@@ -1,50 +1,12 @@
 export const navItems = [
     {
-        title: "Blog Layouts",
-        url: "#",
-        sublist: [
-            {
-                title: "Classic - Sidebar",
-                url: "#",
-            },
-            {
-                title: "Classic - 2 Columns",
-                url: "#",
-            },
-        ],
+        item: "Genre",
+        subMenu: ["Fashion", "Music", "Looks", "Nature"],
     },
     {
-        title: "Categories",
-        url: "Genre",
-        sublist: [
-            {
-                title: "Fashion",
-                url: "Genre/Fashion",
-            },
-            {
-                title: "Music",
-                url: "Genre/Music",
-            },
-            {
-                title: "Looks",
-                url: "Genre/Looks",
-            },
-            {
-                title: "Nature",
-                url: "Genre/Nature",
-            },
-        ],
+        item: "About Me",
     },
     {
-        title: "About Me",
-        url: "#",
-    },
-    {
-        title: "Contact",
-        url: "#",
-    },
-    {
-        title: "Upgrade To Pro",
-        url: "#",
+        item: "Contact",
     },
 ];

@@ -1,17 +1,12 @@
-.blog-article > figcaption {
-    text-align: center;
+.article {
+    padding-block: var(--small-padding);
+}
+
+.article__img,
+.article__teaser {
     padding-block: var(--extra-small-padding);
-    transition: font-size var(--normal-transition);
 }
 
-@media screen and (min-width: 900px) {
-    .blog-article > figcaption {
-        font-size: 1.1rem;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .blog-article > figcaption {
-        font-size: 1.25rem;
-    }
+.article__teaser {
+    font-weight: bold;
 }

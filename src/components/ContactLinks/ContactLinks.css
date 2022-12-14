@@ -1,13 +1,13 @@
-.contact-links {
-    list-style-type: none;
+.social_links {
     display: flex;
-    gap: var(--small-gap);
+    gap: var(--extra-small-gap);
 }
 
-.contact-links > li {
+.social_links a {
     transition: color var(--normal-transition);
 }
 
-.contact-links > li:hover {
+.social_links a:hover,
+.social_links a:focus {
     color: var(--primary-color-1);
 }

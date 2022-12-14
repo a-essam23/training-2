@@ -1,22 +1,18 @@
 import "./Button.css";
 
 export default function Button({
+    children = "Button",
     type = "button",
-    title,
-    id,
     className,
     kind,
-    children = "Button",
-    tabIndex,
+    title,
     onClick = () => {},
 }) {
     return (
         <button
             type={type}
+            className={`button${kind ? `--${kind}` : ""}${className ? ` ${className}` : ""}`}
             title={title}
-            id={id}
-            className={`button--${kind} ${className}`}
-            tabIndex={tabIndex}
             onClick={onClick}
         >
             {children}

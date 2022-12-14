@@ -1,18 +1,22 @@
-import { navItems, blogArticles } from "../../assets/data";
+import { useParams } from "react-router-dom";
 import { BlogArticle } from "../../components";
+import { blogArticles } from "../../assets/data";
+import "./GenrePage.css";
 
 export default function GenrePage() {
+    window.scrollTo(0, 0);
+
+    const { genre } = useParams();
+    const articles = [];
+    blogArticles.forEach((article) => {
+        if (article.genre === genre) articles.push(article);
+    });
+
     return (
-        <main>
-            {navItems.map(
-                ({ title, sublist }) =>
-                    title === "Categories" &&
-                    sublist.map(({ title }) =>
-                        blogArticles.map(
-                            (obj) => obj.cat === title && <BlogArticle key={obj.id} content={obj} />
-                        )
-                    )
-            )}
+        <main className="genre__page">
+            {articles.map((article) => (
+                <BlogArticle key={article.heading} content={article} />
+            ))}
         </main>
     );
 }

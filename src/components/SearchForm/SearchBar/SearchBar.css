@@ -1,4 +1,12 @@
-#searchBar.visible {
+.search__bar.hidden {
+    display: none;
+}
+
+.search__bar.flex {
+    display: flex;
+}
+
+.search__bar {
     border: none;
     padding: var(--small-padding);
     background-color: var(--primary-color-2);
@@ -10,37 +18,38 @@
     position: absolute;
     right: 0;
     top: calc(
-        100% + var(--small-padding) + var(--extra-small-padding) + var(--primary-border-width)
+        100% + var(--extra-small-padding) + var(--extra-small-padding) + var(--primary-border-width)
     );
-    z-index: 1;
+    z-index: 2;
 }
 
-#searchBar > input {
+.search__bar input {
     border: none;
     outline: none;
     background-color: var(--primary-color-2);
-    flex: 100;
+    padding-block: var(--extra-small-padding);
 }
 
-#searchBar .fa-xmark {
-    font-size: 1.25rem;
+.search__bar .fa-xmark {
+    font-size: 1.25em;
     color: var(--secondary-color-1);
     transition: color var(--normal-transition);
 }
 
-#searchBar .fa-xmark:hover,
-#searchBar .fa-xmark:focus {
+.search__bar .fa-xmark:hover,
+.search__bar .fa-xmark:focus {
     color: var(--primary-color-1);
 }
 
-@media screen and (min-width: 424px) {
-    #searchBar.visible {
+@media screen and (min-width: 445px) {
+    .search__bar {
+        top: calc(100% + var(--extra-small-padding));
         flex-wrap: nowrap;
     }
 }
 
 @media screen and (min-width: 900px) {
-    #searchBar.visible {
+    .search__bar {
         top: calc(100% + var(--small-padding));
     }
 }

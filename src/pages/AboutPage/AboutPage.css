@@ -1,0 +1,36 @@
+.about__page {
+    padding-block: var(--medium-padding);
+}
+
+.about__header {
+    padding-block: var(--medium-padding);
+    text-align: center;
+}
+
+.about_me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--small-padding);
+    position: relative;
+}
+
+.about_me > figcaption {
+    padding-block: var(--small-padding);
+}
+
+.about_me > .social_links {
+    background-color: white;
+    padding-inline: var(--small-padding);
+}
+
+.about_me > .social_links::after {
+    content: "";
+    width: 100%;
+    height: 0.01rem;
+    left: 0;
+    bottom: calc(0% + var(--small-padding) + 0.58em);
+    background-color: var(--secondary-color-3);
+    position: absolute;
+    z-index: -1;
+}

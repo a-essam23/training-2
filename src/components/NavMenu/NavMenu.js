@@ -1,53 +1,58 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Button, NavItem } from "../../components";
 import { navItems } from "../../assets/data";
-import { NavItem } from "../../components";
 import "./NavMenu.css";
 
 export default function NavMenu() {
-    const [width, setWidth] = useState(window.innerWidth);
-    const onResizeHandler = () => {
-        setWidth(window.innerWidth);
+    const [isOpen, setIsOpen] = useState(false);
+    const clickHandler = () => {
+        isOpen ? setIsOpen(false) : setIsOpen(true);
     };
 
-    const onClickHandler = (event) => {
-        document.querySelectorAll("nav .list").forEach((element) => {
-            if (event.target === element && width <= 900) {
-                event.preventDefault();
-                if (element.nextElementSibling.style.display === "block") {
-                    element.nextElementSibling.style = "display: none;";
-                } else {
-                    element.nextElementSibling.style = "display: block;";
-                }
-            }
-        });
+    const [, setScreenWidth] = useState();
+    const media444Handler = (event) => {
+        setScreenWidth(event.matches);
+        if (event.matches === false) setIsOpen(false);
     };
 
-    const onMediaChange = (media) => {
-        document.querySelectorAll("nav .list").forEach((element) => {
-            if (media.matches) element.nextElementSibling.style = "display: none;";
-            else element.nextElementSibling.style = "display: unset;";
-        });
+    const closeMenu = () => {
+        setIsOpen(false);
     };
 
     useEffect(() => {
-        window.addEventListener("resize", onResizeHandler);
-        window.addEventListener("click", onClickHandler);
-        const mediaMaxW900 = window.matchMedia("(max-width: 900px)");
-        onMediaChange(mediaMaxW900);
-        mediaMaxW900.addEventListener("change", onMediaChange);
+        window.matchMedia("(max-width: 444px)").addEventListener("change", media444Handler);
+
         return () => {
-            window.removeEventListener("resize", onResizeHandler);
-            window.removeEventListener("click", onClickHandler);
-            mediaMaxW900.removeEventListener("change", onMediaChange);
+            window.matchMedia("(max-width: 444px)").removeEventListener("change", media444Handler);
         };
-    }, [width]);
+    }, []);
 
     return (
-        <nav>
-            <h2 className="screen-readers-only">Main navigation menu</h2>
-            <ul className="nav-menu">
-                {navItems.map(({ title, url, sublist }) => (
-                    <NavItem key={title} title={title} url={url} sublist={sublist} />
+        <nav className="website__navigation">
+            {window.matchMedia("(max-width: 444px)").matches && (
+                <Button className="open-menu" kind="primary" onClick={clickHandler}>
+                    <i className="fa-solid fa-bars"></i>
+                    <span className="screen-readers-only">Open Navigation </span>Menu
+                </Button>
+            )}
+
+            <ul
+                className={`website__menu${
+                    window.matchMedia("(max-width: 444px)").matches
+                        ? isOpen
+                            ? " flex"
+                            : " hidden"
+                        : " flex"
+                }`}
+            >
+                {window.matchMedia("(max-width: 444px)").matches && (
+                    <Button className="close-menu" onClick={clickHandler}>
+                        Close
+                    </Button>
+                )}
+
+                {navItems.map(({ item, subMenu }) => (
+                    <NavItem key={item} item={item} subMenu={subMenu} onItemChoosed={closeMenu} />
                 ))}
             </ul>
         </nav>

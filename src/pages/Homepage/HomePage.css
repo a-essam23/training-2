@@ -1,0 +1,7 @@
+.home__header {
+    margin-bottom: var(--small-padding);
+}
+
+.articles__section {
+    padding-block: var(--small-padding);
+}

@@ -1,34 +1,22 @@
 import { Link } from "react-router-dom";
-import Button from "../../Button/Button";
 import "./BlogArticleHeader.css";
 
-export default function BlogArticleHeader({
-    cat = "Category",
-    heading = "Heading",
-    date = "January 01, 2000",
-    comments = [],
-    onClickDelete = () => {},
-}) {
+export default function BlogArticleHeader({ genre, heading, date, comments = [] }) {
     return (
-        <header className="blog-article__header">
-            <Button onClick={onClickDelete} kind="secondary">
-                X
-            </Button>
-            <a href="#" className="category">
-                {cat}
-            </a>
-            <h3 className="heading">
-                <Link to={`/${cat}/${heading}`}>{heading}</Link>
+        <header className="article__header">
+            <h2 className="article__header__genre">
+                <Link to={`/Genre/${genre}`}>{genre}</Link>
+            </h2>
+            <h3 className="article__header__heading">
+                <Link to={`/Genre/${genre}/${heading.split(" ").join("_")}`}>{heading}</Link>
             </h3>
-            <div>
-                <p className="date" title="Date">
-                    {date}
-                </p>
-                <a href="#" className="comments" title="Comments">
+            <section className="article__header__date_and_comments">
+                <p className="article__header__date">{date}</p>
+                <p className="article__header__comments" title="Comments">
                     <i className="fa-regular fa-comments"></i>
                     {comments.length}
-                </a>
-            </div>
+                </p>
+            </section>
         </header>
     );
 }

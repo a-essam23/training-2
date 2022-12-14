@@ -1,14 +1,9 @@
-#searchButton {
-    border: none;
-    background-color: unset;
+.nav-bar .fa-magnifying-glass {
     cursor: pointer;
-}
-
-#searchButton,
-#searchButton:hover {
     transition: color var(--normal-transition);
 }
 
-#searchButton:hover {
+.nav-bar .fa-magnifying-glass:hover,
+.nav-bar .fa-magnifying-glass:focus {
     color: var(--primary-color-1);
 }

@@ -1,27 +1,27 @@
 export const contactLinks = [
     {
+        title: "Facebook",
         icon: "fa-facebook-f",
         url: "https://www.facebook.com/",
-        title: "Facebook",
     },
     {
+        title: "Twitter",
         icon: "fa-twitter",
         url: "https://twitter.com/",
-        title: "Twitter",
     },
     {
+        title: "Pinterest",
         icon: "fa-pinterest-p",
         url: "https://www.pinterest.com/",
-        title: "Pinterest",
     },
     {
+        title: "Dribbble",
         icon: "fa-dribbble",
         url: "https://dribbble.com/",
-        title: "Dribbble",
     },
     {
+        title: "Linkedin",
         icon: "fa-linkedin-in",
         url: "https://linkedin.com/",
-        title: "Linkedin",
     },
 ];

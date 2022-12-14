@@ -1,5 +1,5 @@
-import { contactLinks } from "./contactLinks/contactLinks";
-import { navItems } from "./navItems/navItems";
 import { blogArticles } from "./blogArticles/blogArticles";
+import { navItems } from "./navItems/navItems";
+import { contactLinks } from "./contactLinks/contactLinks";
 
-export { contactLinks, navItems, blogArticles };
+export { blogArticles, navItems, contactLinks };

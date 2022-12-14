@@ -1,24 +1,17 @@
-import { blogArticles } from "../../assets/data";
 import { BlogArticle, Slider } from "../../components";
-import { useBlogs } from "../../context/BlogProvider";
+import { blogArticles } from "../../assets/data";
+import "./HomePage.css";
 
-export default function Homepage({ onArticleOpen }) {
-    const articleOpenHandler = (id) => {
-        onArticleOpen(id);
-    };
-
+export default function HomePage() {
+    window.scrollTo(0, 0);
     return (
-        <main className="home-page">
-            <header>
-                <Slider />
+        <main className="home__page">
+            <header className="home__header">
+                <Slider kind="main" />
             </header>
-            <section>
-                {blogArticles.map((element) => (
-                    <BlogArticle
-                        key={element.id}
-                        content={element}
-                        onArticleOpen={articleOpenHandler}
-                    />
+            <section className="articles__section">
+                {blogArticles.map((article) => (
+                    <BlogArticle key={article.heading} content={article} />
                 ))}
             </section>
         </main>

@@ -2,30 +2,16 @@ import { BlogArticleHeader, BlogArticleFooter } from "../../components";
 import "./BlogArticle.css";
 
 export default function BlogArticle({
-    content: { id, cat, heading, date, teaser, comments = [], photo },
-    onArticleOpen,
+    content: { genre, heading, date, photo, teaser, comments = [] },
 }) {
-    const articleOpenHandler = () => {
-        onArticleOpen(id);
-        window.scrollTo(0, 0);
-    };
-
     return (
-        <figure className="blog-article">
-            <BlogArticleHeader
-                onClickDelete={onClickDelete}
-                cat={cat}
-                heading={heading}
-                date={date}
-                comments={comments}
-            />
-            <img src={`./img/${photo}`} alt="Random Photo" loading={"lazy"} />
-            <figcaption>{teaser}</figcaption>
-            <BlogArticleFooter
-                articleHeading={heading}
-                articleCategory={cat}
-                onArticleOpen={articleOpenHandler}
-            />
-        </figure>
+        <article className="article">
+            <BlogArticleHeader genre={genre} heading={heading} date={date} comments={comments} />
+            <figure>
+                <img className="article__img" src={photo} alt="Article" />
+                <figcaption className="article__teaser">{teaser}</figcaption>
+            </figure>
+            <BlogArticleFooter genre={genre} heading={heading} />
+        </article>
     );
 }

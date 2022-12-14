@@ -4,8 +4,8 @@ import NavMenu from "./NavMenu/NavMenu";
 import NavSubMenu from "./NavMenu/NavSubMenu/NavSubMenu";
 import NavItem from "./NavMenu/NavItem/NavItem";
 import SearchForm from "./SearchForm/SearchForm";
-import SearchIcon from "./SearchForm/SearchIcon/SearchIcon";
 import SearchBar from "./SearchForm/SearchBar/SearchBar";
+import SearchIcon from "./SearchForm/SearchIcon/SearchIcon";
 import ContactLinks from "./ContactLinks/ContactLinks";
 import BlogArticle from "./BlogArticle/BlogArticle";
 import BlogArticleHeader from "./BlogArticle/BlogArticleHeader/BlogArticleHeader";
@@ -16,11 +16,11 @@ export {
     Button,
     NavBar,
     NavMenu,
-    NavItem,
     NavSubMenu,
+    NavItem,
     SearchForm,
-    SearchIcon,
     SearchBar,
+    SearchIcon,
     ContactLinks,
     BlogArticle,
     BlogArticleHeader,

@@ -18,12 +18,15 @@
         3.2- Scroll Behavior
         3.3- Fonts
         3.4- Images
-        3.5- Links
-        3.6- Horizontal Rules
+        3.5- Unordered Lists
+        3.6- Links
+        3.7- Horizontal Rules
 
     4- Utility Classes
         4.1- For Screen Readers Only
         4.2- Hide Elements
+        4.3- Show Elements
+        4.4- Display Flex
 
     5- Extra Small Screens Layout
 
@@ -58,19 +61,20 @@
     --secondary-color-3: #e6e6e6;
 
     /* 2.2- Paddings */
-    --extra-small-padding: 0.5rem;
-    --small-padding: 1rem;
-    --medium-padding: 2rem;
+    --extra-small-padding: 0.5em;
+    --small-padding: 1em;
+    --medium-padding: 2em;
+    --large-padding: 4em;
     /* --large-padding: 3rem; */
 
     /* 2.3- Gaps */
-    --extra-small-gap: 0.5rem;
-    --small-gap: 1rem;
-    --medium-gap: 2rem;
+    --extra-small-gap: 0.5em;
+    --small-gap: 1em;
+    --medium-gap: 2em;
 
     /* 2.4- Borders */
-    --thin-border-width: 0.05rem;
-    --primary-border-width: 0.15rem;
+    --thin-border-width: 0.05em;
+    --primary-border-width: 0.15em;
     --thin-border: var(--thin-border-width) solid var(--secondary-color-3);
     --primary-border: var(--primary-border-width) solid var(--primary-color-2);
 
@@ -117,15 +121,21 @@ img {
     width: 100%;
 }
 
-/* 3.5- Links */
+/* 3.5- Unordered Lists */
+ul {
+    list-style-type: none;
+}
+
+/* 3.6- Links */
 a {
     color: unset;
     text-decoration: none;
 }
 
-/* 3.6- Horizontal Rules */
+/* 3.7- Horizontal Rules */
 hr {
     height: 0.01rem;
+    width: 100%;
     background-color: var(--secondary-color-3);
     border: none;
 }
@@ -147,6 +157,16 @@ hr {
     display: none;
 }
 
+/* 4.3- Show Elements */
+.visible {
+    display: block;
+}
+
+/* 4.4- Display Flex */
+.flex {
+    display: flex;
+}
+
 /* 
     ==============================
         5- Extra Small Screens Layout
@@ -155,7 +175,8 @@ hr {
 
 #root {
     padding-inline: var(--extra-small-padding);
-    transition: padding-inline var(--normal-transition);
+    transition: padding-inline var(--normal-transition), font-size var(--normal-transition);
+    font-size: 0.9em;
 }
 
 /* 
@@ -168,6 +189,7 @@ hr {
 @media screen and (min-width: 400px) {
     #root {
         padding-inline: var(--small-padding);
+        font-size: 1em;
     }
 }
 
@@ -175,6 +197,7 @@ hr {
 @media screen and (min-width: 700px) {
     #root {
         padding-inline: var(--medium-padding);
+        font-size: 1.15em;
     }
 }
 
@@ -191,5 +214,6 @@ hr {
 @media screen and (min-width: 1200px) {
     #root {
         max-width: 1200px;
+        font-size: 1.5em;
     }
 }
