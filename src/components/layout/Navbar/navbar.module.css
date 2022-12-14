@@ -1,40 +1,56 @@
-.stylesdrpbtnCategory , .stylesdrpbtnBlog{
-    color:  rgb(180, 149, 67)
+.stylesdrpbtnCategory,
+.stylesdrpbtnBlog {
+  color: rgb(180, 149, 67);
 }
 
-.soicalLinks{
-    display: flex;
-    width: 20%;
-    justify-content: space-evenly;
+.soicalLinks {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
 }
-.soicalLinks li i{
-    cursor :pointer ;
-    color: black;
-    transition: all .5;
+.soicalLinks li i {
+  cursor: pointer;
+  color: black;
+  transition: all 0.5;
 }
-.soicalLinks li i:hover{
-    color:  rgb(180, 149, 67);
+.soicalLinks li i:hover {
+  color: rgb(180, 149, 67);
 }
 
-.droplistBlog ,.droplistCategory{
-    display: none;
-    transition: all .5s;
+.droplistBlog,
+.droplistCategory {
+  display: none;
+  transition: all 0.5s;
 }
 
 .stylesdrpbtnBlog:hover .droplistBlog {
-    width: fit-content;
-    display: block;
+  width: 150px;
+  display: block;
+  position:absolute;
+  
+  
 }
 
-.droplistBlog li{
-    padding-top: 10px;
+.droplistBlog li {
+  padding-top: 10px;
+  
 }
-.stylesdrpbtnCategory:hover .droplistCategory{
-    width: fit-content;
-    display: block;
-    
+.stylesdrpbtnCategory:hover .droplistCategory {
+  width: fit-content;
+  display: block;
+  position:absolute;
 }
 
-.droplistCategory li{
-    padding-top: 10px;
+.droplistCategory li {
+  padding-top: 10px;
+}
+
+.droplistBlog li a{
+  text-decoration: none;
+  color: black;
+  
+}
+.droplistCategory li a{
+  text-decoration: none;
+  color: black;
 }

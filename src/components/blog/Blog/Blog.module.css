@@ -1,0 +1,30 @@
+.img {
+  width: 1100px;
+  display: block;
+}
+.flx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hed {
+  margin-bottom: 20px;
+}
+
+.fig {
+  width: 1050px;
+  margin-top: 20px;
+}
+
+.bb {
+  color: #b49543;
+  border: 1px solid black;
+  padding: 8px;
+}
+.bb:hover{
+    color: azure;
+    background-color: black;
+    
+} 

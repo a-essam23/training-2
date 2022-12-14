@@ -1,25 +1,25 @@
-import { BlogHeader } from "../../components";
-import blogs from "../../assets/blogs";
+import BlogHeader from "../../components/blog/BlogHeader/BlogHeader";
+import { useBlogs } from "../../context/BlogContext";
 import styles from "./Homepage.module.css";
-const pageData = Array(16)
-    .fill()
-    .map((el, i) => {
-        return {
-            genre: "Genre " + (i + 1),
-            title: "Title " + (i + 1),
-            date: `${Math.floor(Math.random() * 31)},
-            May , ${Math.floor(Math.random() * 2012 + 2000)} `,
-        };
-    });
+import "bootstrap/dist/css/bootstrap.min.css";
+import Slider from "../../components/blog/Slider/Slider";
+
+import Blog from "../../components/blog/Blog/Blog";
 
 const Homepage = () => {
-    return (
-        <section className="min-h-screen gap-16 flex flex-col items-center">
-            {blogs.map((item) => (
-                <BlogHeader content={item} />
-            ))}
-        </section>
-    );
+  const { blogs } = useBlogs();
+  return (
+    <div>
+      <Slider />
+      <section
+        className={`min-h-screen gap-16 flex flex-col items-center ${styles.blogHeader}`}
+      >
+        {blogs.map((item, i) => (
+          <Blog content={item} key={i} id={i} />
+        ))}
+      </section>
+    </div>
+  );
 };
 
 export default Homepage;

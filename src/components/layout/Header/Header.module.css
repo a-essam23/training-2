@@ -1,0 +1,9 @@
+.header{
+  text-decoration: none;
+  color: black;
+}
+
+.header:hover {
+  color: #b49543;
+  transition: all 5ms;
+}

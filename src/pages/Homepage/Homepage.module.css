@@ -1,3 +1,5 @@
 .blogHeader {
-    background-color: red;
+  overflow: hidden;
+
+  z-index: 100;
 }

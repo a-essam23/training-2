@@ -1,0 +1,13 @@
+.img {
+  width: 1000px;
+}
+
+.flx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  width: 900px;
+}
